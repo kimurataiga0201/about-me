@@ -6,9 +6,36 @@
     <title>バイク - 木村太河の自慢サイト</title>
     <!-- reset.css ress -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="body">
+  <body>
+    <!-- 背景動画 -->
+    <video
+      autoplay
+      muted
+      loop
+      id="backgroundVideo"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.3;
+      "
+    >
+      <source src="images/faker.mp4" type="video/mp4" />
+    </video>
+
     <header class="header">
       <nav class="nav">
         <ul>
@@ -17,33 +44,60 @@
           <li><a href="pride.html">自慢</a></li>
         </ul>
       </nav>
-      <h1>バイク (Motorcycle)</h1>
+      <h1>バイク</h1>
     </header>
     <main>
       <section>
         <h2>バイクの魅力</h2>
-        
-        <h3>好きなバイク</h3>
-        <p>クラシックとかレトロって呼ばれるネイキッドバイクが大好きです。特に以下の2台がお気に入りです。</p>
-        
-        <h4>🏍️ HONDA GB250 クラブマン</h4>
-        <img src="images/1_l.jpg" alt="HONDA GB250 クラブマン" style="max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0;">
-        <p>1983年に発売されたホンダの名車。シンプルで美しいデザインと軽快な走りが魅力です。</p>
-        <p>クラシカルなスタイリングでありながら、現代でも色褪せない魅力を持っています。</p>
-        
-        <h4>🏍️ Kawasaki Meguro S1</h4>
-        <img src="images/917_kawasaki_Meguro_S1_2025_black.jpg" alt="Kawasaki Meguro S1" style="max-width: 100%; height: auto; border-radius: 8px; margin: 10px 0;">
-        <p>カワサキが復活させた「メグロ」ブランドの第一弾モデル。</p>
-        <p>W800をベースにしたクラシカルなスタイリングで、レトロな魅力と現代の技術が融合しています。</p>
-        <p>伝統的な日本のバイクらしい美しいフォルムが特徴です。</p>
-        <p><strong>🔗 詳細情報：</strong><br>
-        <a href="https://www.kawasaki-motors.com/ja-jp/motorcycle/meguro/retro-classic/meguro-s1" target="_blank">Kawasaki Meguro S1 公式サイト</a></p>
-        
 
+        <h3>好きなバイク</h3>
+        <p>
+          クラシックとかレトロって呼ばれるネイキッドバイクが好きです。今これが欲しいかな。
+        </p>
+
+        <h4>🏍️ HONDA GB250 クラブマン</h4>
+        <img
+          src="images/1_l.jpg"
+          alt="HONDA GB250 クラブマン"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+          "
+        />
+        <p>
+          古いこと以外は完璧。新しいやつはGB
+          350になるけど車検も必要だし税金も高いしで学生のうちは買えないかも。
+        </p>
+
+        <h4>🏍️ Kawasaki Meguro S1</h4>
+        <img
+          src="images/917_kawasaki_Meguro_S1_2025_black.jpg"
+          alt="Kawasaki Meguro S1"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+          "
+        />
+        <p>
+          これは値段以外はいい。新しいし見た目も好みだけど高い。流石に80万は笑えない。
+        </p>
+        <p>
+          <strong>🔗 詳細情報：</strong><br />
+          <a
+            href="https://www.kawasaki-motors.com/ja-jp/motorcycle/meguro/retro-classic/meguro-s1"
+            target="_blank"
+            >Kawasaki Meguro S1 公式サイト</a
+          >
+        </p>
       </section>
     </main>
     <footer class="footer">
       <p>&copy; 2025 自慢サイト</p>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

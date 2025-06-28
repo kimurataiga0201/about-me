@@ -6,9 +6,36 @@
     <title>ゲーム - 木村太河の自慢サイト</title>
     <!-- reset.css ress -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="body">
+  <body>
+    <!-- 背景動画 -->
+    <video
+      autoplay
+      muted
+      loop
+      id="backgroundVideo"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.3;
+      "
+    >
+      <source src="images/faker.mp4" type="video/mp4" />
+    </video>
+
     <header class="header">
       <nav class="nav">
         <ul>
@@ -17,25 +44,67 @@
           <li><a href="pride.html">自慢</a></li>
         </ul>
       </nav>
-      <h1>ゲーム (Games)</h1>
+      <h1>ゲーム</h1>
     </header>
     <main>
       <section>
         <h2>好きなゲーム</h2>
         <h3>🎮 League of Legends (LOL)</h3>
-        <p>主にLOLをプレイしています。ランクはゴールドです(2025/06/21現在)。</p>
-        <p><strong>DEEPLOL</strong><br>
-        <a href="https://www.deeplol.gg/summoner/jp/egq0-xoxo" target="_blank">DEEPLOL - egq0 xoxo の戦績</a></p>
+        <p>LOLをプレイしています。ランクはゴールドです(2025/06/21現在)。</p>
+        <img
+          src="images/LOLGOLD.JPG"
+          alt="League of Legends ゴールドランク"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+          "
+        />
+        <p>
+          <strong>DEEPLOL</strong><br />
+          <a href="https://www.deeplol.gg/summoner/jp/egq0-xoxo" target="_blank"
+            >DEEPLOL - egq0#xoxo の戦績</a
+          >
+        </p>
 
         <h3>FPS</h3>
-        <p>FPSは別に好きじゃないけど得意です。valorantのランクはアセンダントです</p>
+        <p>
+          FPSは別に好きじゃないけど得意です。valorantのランクはアセンダントです
+        </p>
+        <img
+          src="images/valo ase.jpeg"
+          alt="Valorant エース"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+          "
+        />
 
         <h3>MMO</h3>
-        <p>hypixelのSkyBlockをプレイしています。総プレイ時間は3000時間くらいです(2025/06/21現在)。</p>
+        <p>
+          hypixelのSkyBlockをプレイしています。総プレイ時間は3000時間くらいです(2025/06/21現在)。
+        </p>
+
+        <h3>格闘ゲーム</h3>
+        <p>ストリートファイター6をプレイしています。エド使ってます。</p>
+        <img
+          src="images/sf6.PNG"
+          alt="ストリートファイター6"
+          style="
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 15px 0;
+          "
+        />
       </section>
     </main>
     <footer class="footer">
       <p>&copy; 2025 自慢サイト</p>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

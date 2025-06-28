@@ -6,9 +6,36 @@
     <title>趣味 - 木村太河の自慢サイト</title>
     <!-- reset.css ress -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="body">
+  <body>
+    <!-- 背景動画 -->
+    <video
+      autoplay
+      muted
+      loop
+      id="backgroundVideo"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.3;
+      "
+    >
+      <source src="images/faker.mp4" type="video/mp4" />
+    </video>
+
     <header class="header">
       <nav class="nav">
         <ul>
@@ -33,5 +60,6 @@
     <footer class="footer">
       <p>&copy; 2025 自慢サイト</p>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
