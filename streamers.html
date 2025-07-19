@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>好きなストリーマー - 木村太河の自己紹介サイト</title>
+    <!-- reset.css ress -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- 背景動画 -->
+    <video
+      autoplay
+      muted
+      loop
+      id="backgroundVideo"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.3;
+      "
+    >
+      <source src="images/faker_plays.mp4" type="video/mp4" />
+    </video>
+
+    <header class="header">
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">プロフィール</a></li>
+          <li><a href="hobbies.html">趣味</a></li>
+          <li><a href="pride.html">自慢</a></li>
+          <li><a href="streamers.html">ストリーマー</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <h1>好きなストリーマー</h1>
+    </header>
+    <main>
+      <section>
+        <h2>推しストリーマー</h2>
+        
+
+        <!-- ストリーマーグリッド -->
+        <div class="streamers-grid">
+          <!-- japanesekreanUg -->
+          <div class="streamer-card">
+            <div class="streamer-image">
+              <img
+                src="images/UGG.jpg"
+                alt="japanesekreanUg"
+                style="width: 100%; height: 200px; object-fit: cover"
+              />
+            </div>
+            <div class="streamer-info">
+              <h3>japanesekreanUg</h3>
+              <p class="streamer-platform">Twitch / YouTube</p>
+              <p class="streamer-description">
+                私の一番好きなストリーマーです。面白い配信をしていて、いつも楽しく見させてもらっています。
+              </p>
+              <div class="streamer-links">
+                <a
+                  href="https://www.twitch.tv/japanesekoreanug"
+                  target="_blank"
+                  class="channel-link"
+                >
+                  Twitchチャンネル
+                </a>
+                <a
+                  href="https://www.youtube.com/@JapaneseKoreanUG"
+                  target="_blank"
+                  class="channel-link"
+                >
+                  YouTubeチャンネル
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>配信視聴スタイル</h3>
+        <div class="viewing-style">
+          <div class="style-item">
+            <h4>🎮 ゲーム配信</h4>
+            <p>
+              japanesekreanUgの配信を中心に、様々なゲーム配信を見て楽しんでいます。面白い配信スタイルが大好きです。
+            </p>
+          </div>
+          <div class="style-item">
+            <h4>🎵 作業用BGM</h4>
+            <p>
+              勉強や作業をしながら、お気に入りの配信をBGMとして流しています。面白い配信で集中力も上がります。
+            </p>
+          </div>
+          <div class="style-item">
+            <h4>📱 スマホで視聴</h4>
+            <p>
+              移動中やちょっとした空き時間に、スマホでアーカイブやハイライト動画を見ています。
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy; 2025 自己紹介</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

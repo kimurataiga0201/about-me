@@ -42,6 +42,8 @@
           <li><a href="index.html">プロフィール</a></li>
           <li><a href="hobbies.html">趣味</a></li>
           <li><a href="pride.html">自慢</a></li>
+          <li><a href="streamers.html">ストリーマー</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
       <h1>ゲーム</h1>
@@ -298,17 +300,26 @@
               "
             />
             <p><strong>メインキャラクター：エド</strong><br /></p>
-            <img
-              src="images/ed_ss01.jpg"
-              alt="エド - ストリートファイター6"
-              style="
-                max-width: 100%;
-                height: auto;
-                border-radius: 10px;
-                margin: 15px 0;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-              "
-            />
+            <a
+              href="https://www.streetfighter.com/6/ja-jp/character/ed"
+              target="_blank"
+            >
+              <img
+                src="images/ed_ss01.jpg"
+                alt="エド - ストリートファイター6"
+                style="
+                  max-width: 100%;
+                  height: auto;
+                  border-radius: 10px;
+                  margin: 15px 0;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                  cursor: pointer;
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                "
+                onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.4)';"
+                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.3)';"
+              />
+            </a>
           </div>
         </div>
 

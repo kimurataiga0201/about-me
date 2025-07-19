@@ -57,3 +57,92 @@ document.addEventListener("keydown", function (event) {
     closeModal();
   }
 });
+
+// お問い合わせフォーム処理
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault(); // フォームのデフォルト送信を停止
+
+      // バリデーション
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        alert("必須項目をすべて入力してください。");
+        return;
+      }
+
+      // メールアドレスの簡単なバリデーション
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("正しいメールアドレスを入力してください。");
+        return;
+      }
+
+      // フォームデータの処理（実際の送信は行わない）
+      const formData = {
+        name: name,
+        email: email,
+        subject: document.getElementById("subject").value,
+        message: message,
+        timestamp: new Date().toISOString(),
+      };
+
+      // ローカルストレージに保存（デモ用）
+      localStorage.setItem("lastContactForm", JSON.stringify(formData));
+
+      // 送信アニメーション
+      const submitBtn = document.querySelector(".submit-btn");
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = "送信中...";
+      submitBtn.disabled = true;
+
+      // 2秒後に成功メッセージを表示
+      setTimeout(function () {
+        // フォームを非表示にして成功メッセージを表示
+        contactForm.style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+
+        // 3秒後にフォームをリセットして再表示
+        setTimeout(function () {
+          contactForm.reset();
+          contactForm.style.display = "block";
+          document.getElementById("successMessage").style.display = "none";
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 3000);
+      }, 2000);
+    });
+
+    // リアルタイムバリデーション
+    const emailInput = document.getElementById("email");
+    if (emailInput) {
+      emailInput.addEventListener("blur", function () {
+        const email = this.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email && !emailRegex.test(email)) {
+          this.style.borderColor = "#ff4444";
+          if (!document.querySelector(".email-error")) {
+            const errorMsg = document.createElement("span");
+            errorMsg.className = "email-error";
+            errorMsg.style.color = "#ff4444";
+            errorMsg.style.fontSize = "0.9rem";
+            errorMsg.textContent = "正しいメールアドレスを入力してください";
+            this.parentNode.appendChild(errorMsg);
+          }
+        } else {
+          this.style.borderColor = "#ff6b00";
+          const errorMsg = document.querySelector(".email-error");
+          if (errorMsg) {
+            errorMsg.remove();
+          }
+        }
+      });
+    }
+  }
+});

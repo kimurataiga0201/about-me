@@ -159,55 +159,6 @@ img:hover {
   filter: blur(1px);
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-  .header {
-    padding: 1rem 0;
-  }
-
-  .header h1 {
-    font-size: 1.8rem;
-  }
-
-  .nav ul li {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .nav ul li a {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  main {
-    padding: 2rem 1rem;
-    margin-bottom: 4rem;
-  }
-
-  section {
-    padding: 1.5rem;
-    margin: 1rem 0;
-  }
-
-  section h2 {
-    font-size: 1.6rem;
-  }
-
-  section h3 {
-    font-size: 1.3rem;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .footer {
-    position: relative;
-    margin-top: 2rem;
-  }
-}
-
 /* モーダルスタイル */
 .modal {
   display: none;
@@ -269,4 +220,292 @@ img:hover {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+/* お問い合わせフォームスタイル */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ff6b00;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.required {
+  color: #ff4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ff6b00;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Zen Old Mincho", serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff8f00;
+  box-shadow: 0 0 10px rgba(255, 143, 0, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ff6b00 0%, #ff8f00 50%, #ff6b00 100%);
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+  font-family: "Zen Old Mincho", serif;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+}
+
+.success-message {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.success-message h3 {
+  color: #00ff00;
+  margin-bottom: 0.5rem;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .nav ul li a {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+    margin-bottom: 4rem;
+  }
+
+  section {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+  }
+
+  section h3 {
+    font-size: 1.3rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    position: relative;
+    margin-top: 2rem;
+  }
+}
+
+/* レスポンシブ対応の強化 */
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 0 1rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  .streamers-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .viewing-style {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ストリーマーページスタイル */
+.streamers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.streamer-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff6b00;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.streamer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255, 107, 0, 0.3);
+}
+
+.streamer-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.streamer-image img {
+  border: none;
+  border-radius: 0;
+  transition: transform 0.3s ease;
+}
+
+.streamer-card:hover .streamer-image img {
+  transform: scale(1.05);
+}
+
+.streamer-info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.streamer-info h3 {
+  color: #ff6b00;
+  font-family: "Michroma", cursive;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.streamer-platform {
+  color: #ffaa33;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.streamer-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.streamer-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.channel-link {
+  background: linear-gradient(45deg, #ff6b00 0%, #ff8f00 50%, #ff6b00 100%);
+  color: #fff !important;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(255, 107, 0, 0.3);
+}
+
+.channel-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.5);
+  text-shadow: none;
+}
+
+.channel-link.disabled {
+  background: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.channel-link.disabled:hover {
+  transform: none;
+  box-shadow: 0 2px 10px rgba(102, 102, 102, 0.3);
+}
+
+.viewing-style {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.style-item {
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid #ff6b00;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.style-item h4 {
+  color: #ff6b00;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.style-item p {
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
 }
