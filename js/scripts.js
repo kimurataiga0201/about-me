@@ -39,3 +39,21 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+// モーダル機能
+function openModal() {
+  document.getElementById("imageModal").style.display = "block";
+  document.body.style.overflow = "hidden"; // スクロールを無効化
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+  document.body.style.overflow = "auto"; // スクロールを有効化
+}
+
+// ESCキーでモーダルを閉じる
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});

@@ -60,12 +60,34 @@
         </p>
         <div style="text-align: center; margin: 20px 0">
           <img
+            id="qrCode"
             src="images/instaglam.jpg"
             alt="Instagram QRコード"
-            style="max-width: 200px; height: auto; border-radius: 10px"
+            style="
+              max-width: 200px;
+              height: auto;
+              border-radius: 10px;
+              cursor: pointer;
+              transition: transform 0.3s ease;
+            "
+            onclick="openModal()"
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
           />
         </div>
         <p>フォロー待ってまーす</p>
+
+        <!-- モーダル -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+          <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img
+              src="images/instaglam.jpg"
+              alt="Instagram QRコード"
+              style="width: 100%; height: auto; border-radius: 10px"
+            />
+          </div>
+        </div>
 
         <h3>背景動画について</h3>
         <p>
@@ -77,7 +99,7 @@
       </section>
     </main>
     <footer class="footer">
-      <p>&copy; 2025 自己紹介 サイト</p>
+      <p>&copy; 2025 自己紹介</p>
     </footer>
     <script src="js/scripts.js"></script>
   </body>

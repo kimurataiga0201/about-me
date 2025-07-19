@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>がーどまん - 木村太河の自慢サイト</title>
+    <title>がーどまん - 木村太河の自己紹介サイト</title>
     <!-- reset.css ress -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <!-- Google Fonts -->
@@ -52,16 +52,22 @@
         <p>
           MMOゲームをプレイしているときに、作業用BGMとしてがーどまんの動画を見てます。
         </p>
-        <img
-          src="images/guardman.jpg"
-          alt="がーどまん"
-          style="
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 15px 0;
-          "
-        />
+        <a href="https://www.youtube.com/@channelguardman1768" target="_blank">
+          <img
+            src="images/guardman.jpg"
+            alt="がーどまん"
+            style="
+              max-width: 100%;
+              height: auto;
+              border-radius: 10px;
+              margin: 15px 0;
+              cursor: pointer;
+              transition: opacity 0.3s ease;
+            "
+            onmouseover="this.style.opacity='0.8'"
+            onmouseout="this.style.opacity='1'"
+          />
+        </a>
         <p>がーどまんのつっこみが面白くていい感じ。</p>
         <p>ファンクラブも入ってます。月1000円。</p>
 
@@ -103,7 +109,7 @@
       </section>
     </main>
     <footer class="footer">
-      <p>&copy; 2025 自慢サイト</p>
+      <p>&copy; 2025 自己紹介</p>
     </footer>
     <script src="js/scripts.js"></script>
   </body>
