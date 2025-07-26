@@ -3,7 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>自己紹介</title>
+    <title>木村太河の自己紹介 | タイ帰国子女・ゲーマー・滋賀在住</title>
+    <meta
+      name="description"
+      content="木村太河の自己紹介サイト。タイの帰国子女、ゲーマー、League of Legends・ストリートファイター6プレイヤー。滋賀県在住。Faker・T1ファン。"
+    />
+    <!-- Open Graph tags for social media -->
+    <meta property="og:title" content="木村太河の自己紹介" />
+    <meta
+      property="og:description"
+      content="タイの帰国子女、ゲーマー、League of Legends・ストリートファイター6プレイヤー。滋賀県在住。"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="木村太河の自己紹介" />
+    <meta
+      name="twitter:description"
+      content="タイの帰国子女、ゲーマー、League of Legends・ストリートファイター6プレイヤー。滋賀県在住。"
+    />
     <!-- reset.css ress -->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,6 +54,28 @@
       <source src="images/faker_plays.mp4" type="video/mp4" />
     </video>
 
+    <!-- アクセシビリティ：動画を停止するボタン -->
+    <button
+      id="pauseVideoBtn"
+      style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: rgba(255, 107, 0, 0.9);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      "
+      onclick="toggleVideo()"
+      aria-label="背景動画の再生/停止"
+    >
+      動画停止
+    </button>
+
     <header class="header">
       <nav class="nav">
         <ul>
@@ -52,7 +93,7 @@
         <h2>プロフィール</h2>
         <p>木村太河です。</p>
         <p>滋賀に住んでます。一応タイの帰国子女です。タイ語は喋れません。</p>
-        
+
         <h3>SNS</h3>
         <p>
           📸 <strong>Instagram:</strong>

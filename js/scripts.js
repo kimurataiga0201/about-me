@@ -146,3 +146,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// 背景動画の制御機能
+function toggleVideo() {
+  const video = document.getElementById("backgroundVideo");
+  const button = document.getElementById("pauseVideoBtn");
+
+  if (video.paused) {
+    video.play();
+    button.textContent = "動画停止";
+    button.setAttribute("aria-label", "背景動画を停止");
+  } else {
+    video.pause();
+    button.textContent = "動画再生";
+    button.setAttribute("aria-label", "背景動画を再生");
+  }
+}
+
+// prefers-reduced-motionに対応
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const video = document.getElementById("backgroundVideo");
+  if (video) {
+    video.pause();
+    const button = document.getElementById("pauseVideoBtn");
+    if (button) {
+      button.textContent = "動画再生";
+      button.setAttribute("aria-label", "背景動画を再生");
+    }
+  }
+}
+
+// スムーススクロールの実装
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
+});
