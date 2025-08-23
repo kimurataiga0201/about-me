@@ -1,0 +1,289 @@
+/* 軽量版CSS - ストリートファイター6風デザイン */
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Zen+Old+Mincho&display=swap");
+
+/* 基本スタイル */
+body {
+  font-family: "Zen Old Mincho", serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+.header {
+  background: linear-gradient(45deg, #ff6b00 0%, #ff8f00 50%, #ff6b00 100%);
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(255, 107, 0, 0.3);
+  border-bottom: 3px solid #ff4500;
+}
+
+.header h1 {
+  font-family: "Michroma", cursive;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0.5rem 0;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+/* ナビゲーション */
+.nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(45deg, #333 0%, #555 50%, #333 100%);
+  border-radius: 25px;
+  border: 2px solid #ff6b00;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav ul li a:hover {
+  background: linear-gradient(45deg, #ff6b00 0%, #ff8f00 50%, #ff6b00 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+}
+
+/* メインコンテンツ */
+main {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 6rem;
+  min-height: calc(100vh - 200px);
+}
+
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #ff6b00;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+  font-family: "Michroma", cursive;
+  color: #ff6b00;
+  font-size: 2.2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+section h3 {
+  font-family: "Michroma", cursive;
+  color: #ffaa33;
+  font-size: 1.5rem;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+section a {
+  color: #ff6b00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+section a:hover {
+  color: #ffaa33;
+  text-shadow: 0 0 5px rgba(255, 170, 51, 0.5);
+}
+
+/* 画像スタイル */
+img {
+  border-radius: 10px;
+  border: 3px solid #ff6b00;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 1;
+}
+
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 25px rgba(255, 107, 0, 0.3);
+}
+
+/* フッター */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(45deg, #111 0%, #333 50%, #111 100%);
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 3px solid #ff6b00;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* モーダルスタイル（軽量版） */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #2d2d2d;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #ff6b00;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(255, 107, 0, 0.3);
+}
+
+.close {
+  color: #ff6b00;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ffaa33;
+}
+
+/* フォームスタイル（軽量版） */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ff6b00;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+}
+
+.required {
+  color: #ff4444;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ff6b00 0%, #ff8f00 100%);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(45deg, #ff8f00 0%, #ffaa33 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .nav ul li a {
+    display: block;
+    margin: 0 1rem;
+  }
+
+  main {
+    padding: 2rem 1rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  #qrCode {
+    max-width: 120px !important;
+  }
+}
+
+/* 軽量化：アニメーション最小限 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

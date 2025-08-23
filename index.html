@@ -34,48 +34,6 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <!-- 背景動画 -->
-    <video
-      autoplay
-      muted
-      loop
-      id="backgroundVideo"
-      style="
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-        opacity: 0.3;
-      "
-    >
-      <source src="images/faker_plays.mp4" type="video/mp4" />
-    </video>
-
-    <!-- アクセシビリティ：動画を停止するボタン -->
-    <button
-      id="pauseVideoBtn"
-      style="
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-        background: rgba(255, 107, 0, 0.9);
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-      "
-      onclick="toggleVideo()"
-      aria-label="背景動画の再生/停止"
-    >
-      動画停止
-    </button>
-
     <header class="header">
       <nav class="nav">
         <ul>
@@ -131,12 +89,6 @@
             />
           </div>
         </div>
-
-        <h3>背景動画について</h3>
-        <p>
-          <strong>背景の動画です。FakerとT1のファンです。</strong>
-          <a href="https://www.youtube.com/watch?v=P--2--5gbcE" target="_blank">
-            YouTube - Hall of Legends: Faker
           </a>
         </p>
       </section>
