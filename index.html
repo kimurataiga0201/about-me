@@ -52,6 +52,89 @@
         <p>木村太河です。</p>
         <p>滋賀に住んでます。一応タイの帰国子女です。タイ語は喋れません。</p>
 
+        <!-- 愛犬紹介セクション -->
+        <div
+          style="
+            background: rgba(255, 107, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border: 2px solid #ff6b00;
+          "
+        >
+          <h3>🐕 愛犬紹介</h3>
+          <p>家族の一員である可愛い愛犬たちです！</p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              gap: 15px;
+              margin: 15px 0;
+            "
+          >
+            <div style="text-align: center">
+              <img
+                src="images/IMG_0587.PNG"
+                alt="愛犬の写真1"
+                style="
+                  width: 100%;
+                  max-width: 200px;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  transition: transform 0.3s ease;
+                "
+                onclick="openDogModal('images/IMG_0587.PNG')"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
+                loading="lazy"
+              />
+            </div>
+            <div style="text-align: center">
+              <img
+                src="images/IMG_0675.JPG"
+                alt="愛犬の写真2"
+                style="
+                  width: 100%;
+                  max-width: 200px;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  transition: transform 0.3s ease;
+                "
+                onclick="openDogModal('images/IMG_0675.JPG')"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
+                loading="lazy"
+              />
+            </div>
+            <div style="text-align: center">
+              <img
+                src="images/IMG_0699.jpeg"
+                alt="愛犬の写真3"
+                style="
+                  width: 100%;
+                  max-width: 200px;
+                  height: 200px;
+                  object-fit: cover;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  transition: transform 0.3s ease;
+                "
+                onclick="openDogModal('images/IMG_0699.jpeg')"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <p style="margin-top: 15px">
+            📷 写真をクリックすると拡大表示されます
+          </p>
+        </div>
+
         <h3>SNS</h3>
         <p>
           📸 <strong>Instagram:</strong>
@@ -89,6 +172,33 @@
             />
           </div>
         </div>
+
+        <!-- 犬の写真用モーダル -->
+        <div id="dogModal" class="modal" onclick="closeDogModal()">
+          <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeDogModal()">&times;</span>
+            <img
+              id="dogModalImage"
+              src=""
+              alt="愛犬の写真"
+              style="
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                max-height: 80vh;
+                object-fit: contain;
+              "
+            />
+          </div>
+        </div>
+
+        <h3>推し情報</h3>
+        <p>
+          <strong
+            >League of LegendsのプロプレイヤーFakerとT1のファンです！</strong
+          ><br />
+          <a href="https://www.youtube.com/watch?v=P--2--5gbcE" target="_blank">
+            YouTube - Hall of Legends: Faker
           </a>
         </p>
       </section>

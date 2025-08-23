@@ -244,6 +244,38 @@ img:hover {
   box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
 }
 
+/* 愛犬セクションのスタイル */
+.dog-section {
+  background: rgba(255, 107, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  border: 2px solid #ff6b00;
+}
+
+.dog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.dog-image {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #ff6b00;
+}
+
+.dog-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 107, 0, 0.4);
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
   .header h1 {

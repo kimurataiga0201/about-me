@@ -24,8 +24,28 @@ function closeModal() {
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     closeModal();
+    closeDogModal();
   }
 });
+
+// 犬の写真用モーダル機能
+function openDogModal(imageSrc) {
+  const modal = document.getElementById("dogModal");
+  const modalImage = document.getElementById("dogModalImage");
+  if (modal && modalImage) {
+    modalImage.src = imageSrc;
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closeDogModal() {
+  const modal = document.getElementById("dogModal");
+  if (modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+}
 
 // お問い合わせフォーム処理（軽量版）
 document.addEventListener("DOMContentLoaded", function () {
